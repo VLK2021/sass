@@ -1,10 +1,8 @@
-$color: green;
+@import "config";
 
-body {
-  background-color: $color;
-
-  h1 {
-    $color: blue;
-    color: $color;
-  }
+body{
+  background-color: $background-color;
+  font-size: $font-size;
+  font-family: $font-family;
+  height: $app-height;
 }
