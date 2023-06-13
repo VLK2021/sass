@@ -1,42 +1,10 @@
-@mixin font {
-  //font-size: 14px;
-  //font-weight: normal;
+@import "mixins";
 
-  font: {
-    size: 14px;
-    weight: bold;
-  }
-}
-
-@mixin color {
-  @include font;
-  color: #fff;
-  background-color: red;
-}
-
+//body {
+//  @include block(3px, 4px dotted red);
+//}
 
 body {
-  @include font;
+  @include block($border: 4px dotted red, $radius: 5px);
+  @include box-shadow(1px 1px 1px #eee, 2px 2px 2px black);
 }
-
-p {
-  @include color;
-}
-
-///==================================================================
-$link: orange;
-
-@mixin link-color {
-  a {
-    color: $link;
-    background-color: blue;
-  }
-}
-
-@include link-color;
-
-p {
-  @include link-color;
-}
-
-
