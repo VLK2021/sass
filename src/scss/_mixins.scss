@@ -1,6 +1,0 @@
-@mixin apply-li {
-  li {
-    font-weight: bold;
-    @content;
-  }
-}
