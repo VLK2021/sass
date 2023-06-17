@@ -1,2 +1,27 @@
+@mixin large-screen() {
+  @media only screen and (max-width: 960px){
+    @content;
+  }
+}
 
+@mixin tiny-screen() {
+  @media only screen and (max-width: 320px){
+    @content;
+  }
+}
+
+
+body a {
+  font-size: 20px;
+
+  @include large-screen {
+    font-size: 125%;
+    background-color: red;
+  }
+
+  @include tiny-screen {
+    font-size: 200%;
+    background-color: aqua;
+  }
+}
 
