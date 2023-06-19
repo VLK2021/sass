@@ -1,27 +1,38 @@
-@mixin large-screen() {
-  @media only screen and (max-width: 960px){
-    @content;
-  }
+//body {
+//  font-size: 5px;
+//}
+
+//body {
+//  font-size: 5px + 10px;
+//}
+
+//body {
+//  font-size: 15px - 10px;
+//}
+
+//body {
+//  font-size: (5px * 10);
+//}
+
+//body {
+//  font-size: (15px / 5);
+//}
+
+//======================================================================================
+//при роботі зі змінними також доступні усі оператори
+//$value: 5px;
+//$color: #abc;
+//
+//body {
+//  font-size: $value * 4;
+//  color: $color;
+//}
+
+//==========================================================
+$value: 5px;
+$color: #abc;
+
+body {
+  font-size: $value * 4;
+  color: darken($color, 20%);
 }
-
-@mixin tiny-screen() {
-  @media only screen and (max-width: 320px){
-    @content;
-  }
-}
-
-
-body a {
-  font-size: 20px;
-
-  @include large-screen {
-    font-size: 125%;
-    background-color: red;
-  }
-
-  @include tiny-screen {
-    font-size: 200%;
-    background-color: aqua;
-  }
-}
-
